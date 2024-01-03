@@ -1,35 +1,11 @@
-# Ceph client libraries for Homebrew
+homebrew-ceph-fuse
 
-This is a [Ceph][] tap for [Homebrew][].
+Ref from https://github.com/mulbc/homebrew-ceph-client.
+Ref from https://github.com/ailabstw/homebrew-ceph-fuse. Nautilus support was added.
 
-Mac users can use these formulae to easily install and update Ceph libraries.
+brew cask install osxfuse
+brew tap ailabstw/homebrew-ceph-fuse
+brew install ceph-fuse
+Note If you have previously installed mulbc/homebrew-ceph-client, please:
 
-## Initial setup
-
-If you don't have Homebrew, install it from their [homepage][homebrew].
-
-Then, add this tap:
-
-```
-brew tap mulbc/ceph-client
-```
-
-## Installing
-
-To install the Ceph client libraries:
-
-```
-brew install ceph-client
-```
-
-## Updating
-
-Simply run:
-
-```
-brew update
-brew upgrade ceph-client
-```
-
-[homebrew]: http://brew.sh/
-[ceph]: https://ceph.com/
+brew remove ceph-client

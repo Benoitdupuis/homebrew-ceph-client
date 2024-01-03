@@ -48,7 +48,7 @@ class CephClient < Formula
     sha256 "c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"
   end
 
-  patch :DATA
+  # patch :DATA
 
   def install
     ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["nss"].opt_lib}/pkgconfig"

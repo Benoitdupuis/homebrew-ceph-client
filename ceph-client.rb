@@ -1,14 +1,14 @@
 class CephClient < Formula
   desc "Ceph client tools and libraries"
   homepage "https://ceph.com"
-  url "https://download.ceph.com/tarballs/ceph-17.2.5.tar.gz"
-  sha256 "362269c147913af874b2249a46846b0e6f82d2ceb50af46222b6ddec9991b29a"
+  url "https://download.ceph.com/tarballs/ceph-14.2.21.tar.gz"
+  sha256 "461c04117ce65f147ea966d89027cc7fe63e50d71515a939ecd80cd367c02d24"
   revision 1
 
   bottle do
     rebuild 1
-    root_url "https://github.com/mulbc/homebrew-ceph-client/releases/download/quincy-17.2.5-1"
-    sha256 cellar: :any, arm64_ventura: "b6e30275e0c5012874b73130fd0119b7f40f8180f1c6b54e3abb1f8bf8680ed5"
+    root_url "https://github.com/Benoitdupuis/homebrew-ceph-client/releases/download/nautilus-14.2.5/"
+    # sha256 cellar: :any, arm64_ventura: "b6e30275e0c5012874b73130fd0119b7f40f8180f1c6b54e3abb1f8bf8680ed5"
   end
 
   # depends_on "osxfuse"
@@ -16,11 +16,11 @@ class CephClient < Formula
   depends_on "openssl" => :build
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "cython" => :build
+  # depends_on "cython" => :build
   depends_on "leveldb" => :build
   depends_on "nss"
   depends_on "pkg-config" => :build
-  depends_on "python@3.11"
+  depends_on "python@3.12"
   depends_on "sphinx-doc" => :build
   depends_on "yasm"
   def caveats

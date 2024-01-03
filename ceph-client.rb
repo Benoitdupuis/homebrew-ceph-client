@@ -16,7 +16,7 @@ class CephClient < Formula
   depends_on "openssl" => :build
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  # depends_on "cython" => :build
+  depends_on "cython@3.11" => :build
   depends_on "leveldb" => :build
   depends_on "nss"
   depends_on "pkg-config" => :build

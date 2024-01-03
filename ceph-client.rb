@@ -54,9 +54,9 @@ class CephClient < Formula
     ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["nss"].opt_lib}/pkgconfig"
     ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["openssl"].opt_lib}/pkgconfig"
     ENV.prepend_path "PKG_CONFIG_PATH", "/usr/local/lib/pkgconfig"
-    xy = Language::Python.major_minor_version "python3"
-    ENV.prepend_create_path "PYTHONPATH", "#{Formula["cython"].opt_libexec}/lib/python#{xy}/site-packages"
-    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{xy}/site-packages"
+    # xy = Language::Python.major_minor_version "python3"
+    ENV.prepend_create_path "PYTHONPATH", "#{Formula["cython"].opt_libexec}/lib/python3.12/site-packages"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python3.12/site-packages"
     resources.each do |r|
       r.stage do
         system "python3", *Language::Python.setup_install_args(libexec/"vendor")
